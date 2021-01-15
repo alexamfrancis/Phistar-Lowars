@@ -24,6 +24,7 @@
 		0A36187125B1460A00BFD9AC /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36187025B1460A00BFD9AC /* Starship.swift */; };
 		0A36187625B1461300BFD9AC /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36187525B1461300BFD9AC /* Vehicle.swift */; };
 		0A36187F25B20D4500BFD9AC /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36187E25B20D4500BFD9AC /* Collection.swift */; };
+		0A56262E25B247BA006D75D1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56262D25B247BA006D75D1 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		0A36187025B1460A00BFD9AC /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
 		0A36187525B1461300BFD9AC /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		0A36187E25B20D4500BFD9AC /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		0A56262D25B247BA006D75D1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,9 +124,7 @@
 				0A36181F25B143FC00BFD9AC /* ViewController.swift */,
 				0A36187A25B1461800BFD9AC /* Model */,
 				0A36185825B145C800BFD9AC /* Network */,
-				0A36182125B143FC00BFD9AC /* Main.storyboard */,
-				0A36182425B143FD00BFD9AC /* Assets.xcassets */,
-				0A36182625B143FD00BFD9AC /* LaunchScreen.storyboard */,
+				0A56262925B23773006D75D1 /* UI */,
 				0A36182925B143FD00BFD9AC /* Info.plist */,
 			);
 			path = "Phistar Lowars";
@@ -151,6 +151,7 @@
 		0A36185825B145C800BFD9AC /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				0A56262D25B247BA006D75D1 /* NetworkManager.swift */,
 				0A36184E25B1440800BFD9AC /* Router.swift */,
 				0A36185325B1455800BFD9AC /* ServiceLayer.swift */,
 			);
@@ -169,6 +170,16 @@
 				0A36187525B1461300BFD9AC /* Vehicle.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0A56262925B23773006D75D1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0A36182125B143FC00BFD9AC /* Main.storyboard */,
+				0A36182425B143FD00BFD9AC /* Assets.xcassets */,
+				0A36182625B143FD00BFD9AC /* LaunchScreen.storyboard */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +315,7 @@
 				0A36185425B1455800BFD9AC /* ServiceLayer.swift in Sources */,
 				0A36187125B1460A00BFD9AC /* Starship.swift in Sources */,
 				0A36185D25B145D200BFD9AC /* Film.swift in Sources */,
+				0A56262E25B247BA006D75D1 /* NetworkManager.swift in Sources */,
 				0A36187F25B20D4500BFD9AC /* Collection.swift in Sources */,
 				0A36184F25B1440800BFD9AC /* Router.swift in Sources */,
 				0A36186725B145DE00BFD9AC /* Planet.swift in Sources */,
