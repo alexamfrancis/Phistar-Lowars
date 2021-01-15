@@ -18,7 +18,7 @@ class Person: Codable {
     var birthYear: String?
     var gender: String?
     var homeworld: String?
-    var films: String?
+    var films: [String]?
     var species: [String]?
     var vehicles: [String]?
     var starships: [String]?
