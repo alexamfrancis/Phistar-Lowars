@@ -37,6 +37,9 @@
                             <constraint firstItem="r9B-mm-DjP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-40" id="lpE-Hx-XVi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="r9B-mm-DjP" id="h0v-9n-fOk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
