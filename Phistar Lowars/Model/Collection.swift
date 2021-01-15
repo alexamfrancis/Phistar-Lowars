@@ -1,0 +1,18 @@
+//
+//  Collection.swift
+//  Phistar Lowars
+//
+//  Created by Alexandra Francis on 1/15/21.
+//
+
+import Foundation
+
+
+struct Collection <T: Codable>: Codable {
+    
+    var count: Int?
+    var next: String?
+    var previous: String?
+    var results: [T]?
+    
+}

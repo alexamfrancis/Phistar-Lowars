@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A36181C25B143FC00BFD9AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36181B25B143FC00BFD9AC /* AppDelegate.swift */; };
+		0A36181E25B143FC00BFD9AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36181D25B143FC00BFD9AC /* SceneDelegate.swift */; };
+		0A36182025B143FC00BFD9AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36181F25B143FC00BFD9AC /* ViewController.swift */; };
+		0A36182325B143FC00BFD9AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A36182125B143FC00BFD9AC /* Main.storyboard */; };
+		0A36182525B143FD00BFD9AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A36182425B143FD00BFD9AC /* Assets.xcassets */; };
+		0A36182825B143FD00BFD9AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A36182625B143FD00BFD9AC /* LaunchScreen.storyboard */; };
+		0A36183325B143FD00BFD9AC /* Phistar_LowarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36183225B143FD00BFD9AC /* Phistar_LowarsTests.swift */; };
+		0A36183E25B143FD00BFD9AC /* Phistar_LowarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36183D25B143FD00BFD9AC /* Phistar_LowarsUITests.swift */; };
+		0A36184F25B1440800BFD9AC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36184E25B1440800BFD9AC /* Router.swift */; };
+		0A36185425B1455800BFD9AC /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36185325B1455800BFD9AC /* ServiceLayer.swift */; };
+		0A36185D25B145D200BFD9AC /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36185C25B145D200BFD9AC /* Film.swift */; };
+		0A36186225B145D800BFD9AC /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36186125B145D800BFD9AC /* Person.swift */; };
+		0A36186725B145DE00BFD9AC /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36186625B145DE00BFD9AC /* Planet.swift */; };
+		0A36186C25B145F500BFD9AC /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36186B25B145F500BFD9AC /* Species.swift */; };
+		0A36187125B1460A00BFD9AC /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36187025B1460A00BFD9AC /* Starship.swift */; };
+		0A36187625B1461300BFD9AC /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36187525B1461300BFD9AC /* Vehicle.swift */; };
+		0A36187F25B20D4500BFD9AC /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36187E25B20D4500BFD9AC /* Collection.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0A36182F25B143FD00BFD9AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A36181025B143FC00BFD9AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A36181725B143FC00BFD9AC;
+			remoteInfo = "Phistar Lowars";
+		};
+		0A36183A25B143FD00BFD9AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A36181025B143FC00BFD9AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A36181725B143FC00BFD9AC;
+			remoteInfo = "Phistar Lowars";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A36181825B143FC00BFD9AC /* Phistar Lowars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Phistar Lowars.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A36181B25B143FC00BFD9AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0A36181D25B143FC00BFD9AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0A36181F25B143FC00BFD9AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0A36182225B143FC00BFD9AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0A36182425B143FD00BFD9AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A36182725B143FD00BFD9AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0A36182925B143FD00BFD9AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A36182E25B143FD00BFD9AC /* Phistar LowarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Phistar LowarsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A36183225B143FD00BFD9AC /* Phistar_LowarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phistar_LowarsTests.swift; sourceTree = "<group>"; };
+		0A36183425B143FD00BFD9AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A36183925B143FD00BFD9AC /* Phistar LowarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Phistar LowarsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A36183D25B143FD00BFD9AC /* Phistar_LowarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phistar_LowarsUITests.swift; sourceTree = "<group>"; };
+		0A36183F25B143FD00BFD9AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A36184E25B1440800BFD9AC /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		0A36185325B1455800BFD9AC /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
+		0A36185C25B145D200BFD9AC /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		0A36186125B145D800BFD9AC /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		0A36186625B145DE00BFD9AC /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		0A36186B25B145F500BFD9AC /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
+		0A36187025B1460A00BFD9AC /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		0A36187525B1461300BFD9AC /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		0A36187E25B20D4500BFD9AC /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A36181525B143FC00BFD9AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A36182B25B143FD00BFD9AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A36183625B143FD00BFD9AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A36180F25B143FC00BFD9AC = {
+			isa = PBXGroup;
+			children = (
+				0A36181A25B143FC00BFD9AC /* Phistar Lowars */,
+				0A36183125B143FD00BFD9AC /* Phistar LowarsTests */,
+				0A36183C25B143FD00BFD9AC /* Phistar LowarsUITests */,
+				0A36181925B143FC00BFD9AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0A36181925B143FC00BFD9AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A36181825B143FC00BFD9AC /* Phistar Lowars.app */,
+				0A36182E25B143FD00BFD9AC /* Phistar LowarsTests.xctest */,
+				0A36183925B143FD00BFD9AC /* Phistar LowarsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A36181A25B143FC00BFD9AC /* Phistar Lowars */ = {
+			isa = PBXGroup;
+			children = (
+				0A36181B25B143FC00BFD9AC /* AppDelegate.swift */,
+				0A36181D25B143FC00BFD9AC /* SceneDelegate.swift */,
+				0A36181F25B143FC00BFD9AC /* ViewController.swift */,
+				0A36187A25B1461800BFD9AC /* Model */,
+				0A36185825B145C800BFD9AC /* Network */,
+				0A36182125B143FC00BFD9AC /* Main.storyboard */,
+				0A36182425B143FD00BFD9AC /* Assets.xcassets */,
+				0A36182625B143FD00BFD9AC /* LaunchScreen.storyboard */,
+				0A36182925B143FD00BFD9AC /* Info.plist */,
+			);
+			path = "Phistar Lowars";
+			sourceTree = "<group>";
+		};
+		0A36183125B143FD00BFD9AC /* Phistar LowarsTests */ = {
+			isa = PBXGroup;
+			children = (
+				0A36183225B143FD00BFD9AC /* Phistar_LowarsTests.swift */,
+				0A36183425B143FD00BFD9AC /* Info.plist */,
+			);
+			path = "Phistar LowarsTests";
+			sourceTree = "<group>";
+		};
+		0A36183C25B143FD00BFD9AC /* Phistar LowarsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0A36183D25B143FD00BFD9AC /* Phistar_LowarsUITests.swift */,
+				0A36183F25B143FD00BFD9AC /* Info.plist */,
+			);
+			path = "Phistar LowarsUITests";
+			sourceTree = "<group>";
+		};
+		0A36185825B145C800BFD9AC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0A36184E25B1440800BFD9AC /* Router.swift */,
+				0A36185325B1455800BFD9AC /* ServiceLayer.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0A36187A25B1461800BFD9AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A36187E25B20D4500BFD9AC /* Collection.swift */,
+				0A36185C25B145D200BFD9AC /* Film.swift */,
+				0A36186125B145D800BFD9AC /* Person.swift */,
+				0A36186625B145DE00BFD9AC /* Planet.swift */,
+				0A36186B25B145F500BFD9AC /* Species.swift */,
+				0A36187025B1460A00BFD9AC /* Starship.swift */,
+				0A36187525B1461300BFD9AC /* Vehicle.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A36181725B143FC00BFD9AC /* Phistar Lowars */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A36184225B143FD00BFD9AC /* Build configuration list for PBXNativeTarget "Phistar Lowars" */;
+			buildPhases = (
+				0A36181425B143FC00BFD9AC /* Sources */,
+				0A36181525B143FC00BFD9AC /* Frameworks */,
+				0A36181625B143FC00BFD9AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Phistar Lowars";
+			productName = "Phistar Lowars";
+			productReference = 0A36181825B143FC00BFD9AC /* Phistar Lowars.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0A36182D25B143FD00BFD9AC /* Phistar LowarsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A36184525B143FD00BFD9AC /* Build configuration list for PBXNativeTarget "Phistar LowarsTests" */;
+			buildPhases = (
+				0A36182A25B143FD00BFD9AC /* Sources */,
+				0A36182B25B143FD00BFD9AC /* Frameworks */,
+				0A36182C25B143FD00BFD9AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A36183025B143FD00BFD9AC /* PBXTargetDependency */,
+			);
+			name = "Phistar LowarsTests";
+			productName = "Phistar LowarsTests";
+			productReference = 0A36182E25B143FD00BFD9AC /* Phistar LowarsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0A36183825B143FD00BFD9AC /* Phistar LowarsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A36184825B143FD00BFD9AC /* Build configuration list for PBXNativeTarget "Phistar LowarsUITests" */;
+			buildPhases = (
+				0A36183525B143FD00BFD9AC /* Sources */,
+				0A36183625B143FD00BFD9AC /* Frameworks */,
+				0A36183725B143FD00BFD9AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A36183B25B143FD00BFD9AC /* PBXTargetDependency */,
+			);
+			name = "Phistar LowarsUITests";
+			productName = "Phistar LowarsUITests";
+			productReference = 0A36183925B143FD00BFD9AC /* Phistar LowarsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A36181025B143FC00BFD9AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					0A36181725B143FC00BFD9AC = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					0A36182D25B143FD00BFD9AC = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 0A36181725B143FC00BFD9AC;
+					};
+					0A36183825B143FD00BFD9AC = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 0A36181725B143FC00BFD9AC;
+					};
+				};
+			};
+			buildConfigurationList = 0A36181325B143FC00BFD9AC /* Build configuration list for PBXProject "Phistar Lowars" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0A36180F25B143FC00BFD9AC;
+			productRefGroup = 0A36181925B143FC00BFD9AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A36181725B143FC00BFD9AC /* Phistar Lowars */,
+				0A36182D25B143FD00BFD9AC /* Phistar LowarsTests */,
+				0A36183825B143FD00BFD9AC /* Phistar LowarsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A36181625B143FC00BFD9AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A36182825B143FD00BFD9AC /* LaunchScreen.storyboard in Resources */,
+				0A36182525B143FD00BFD9AC /* Assets.xcassets in Resources */,
+				0A36182325B143FC00BFD9AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A36182C25B143FD00BFD9AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A36183725B143FD00BFD9AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A36181425B143FC00BFD9AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A36185425B1455800BFD9AC /* ServiceLayer.swift in Sources */,
+				0A36187125B1460A00BFD9AC /* Starship.swift in Sources */,
+				0A36185D25B145D200BFD9AC /* Film.swift in Sources */,
+				0A36187F25B20D4500BFD9AC /* Collection.swift in Sources */,
+				0A36184F25B1440800BFD9AC /* Router.swift in Sources */,
+				0A36186725B145DE00BFD9AC /* Planet.swift in Sources */,
+				0A36182025B143FC00BFD9AC /* ViewController.swift in Sources */,
+				0A36186225B145D800BFD9AC /* Person.swift in Sources */,
+				0A36181C25B143FC00BFD9AC /* AppDelegate.swift in Sources */,
+				0A36187625B1461300BFD9AC /* Vehicle.swift in Sources */,
+				0A36186C25B145F500BFD9AC /* Species.swift in Sources */,
+				0A36181E25B143FC00BFD9AC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A36182A25B143FD00BFD9AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A36183325B143FD00BFD9AC /* Phistar_LowarsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A36183525B143FD00BFD9AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A36183E25B143FD00BFD9AC /* Phistar_LowarsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0A36183025B143FD00BFD9AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A36181725B143FC00BFD9AC /* Phistar Lowars */;
+			targetProxy = 0A36182F25B143FD00BFD9AC /* PBXContainerItemProxy */;
+		};
+		0A36183B25B143FD00BFD9AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A36181725B143FC00BFD9AC /* Phistar Lowars */;
+			targetProxy = 0A36183A25B143FD00BFD9AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0A36182125B143FC00BFD9AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A36182225B143FC00BFD9AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0A36182625B143FD00BFD9AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A36182725B143FD00BFD9AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0A36184025B143FD00BFD9AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0A36184125B143FD00BFD9AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A36184325B143FD00BFD9AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZLU3AZUPD;
+				INFOPLIST_FILE = "Phistar Lowars/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alexafrancis.Phistar-Lowars";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0A36184425B143FD00BFD9AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZLU3AZUPD;
+				INFOPLIST_FILE = "Phistar Lowars/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alexafrancis.Phistar-Lowars";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0A36184625B143FD00BFD9AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZLU3AZUPD;
+				INFOPLIST_FILE = "Phistar LowarsTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alexafrancis.Phistar-LowarsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phistar Lowars.app/Phistar Lowars";
+			};
+			name = Debug;
+		};
+		0A36184725B143FD00BFD9AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZLU3AZUPD;
+				INFOPLIST_FILE = "Phistar LowarsTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alexafrancis.Phistar-LowarsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phistar Lowars.app/Phistar Lowars";
+			};
+			name = Release;
+		};
+		0A36184925B143FD00BFD9AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZLU3AZUPD;
+				INFOPLIST_FILE = "Phistar LowarsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alexafrancis.Phistar-LowarsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Phistar Lowars";
+			};
+			name = Debug;
+		};
+		0A36184A25B143FD00BFD9AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZLU3AZUPD;
+				INFOPLIST_FILE = "Phistar LowarsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alexafrancis.Phistar-LowarsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Phistar Lowars";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A36181325B143FC00BFD9AC /* Build configuration list for PBXProject "Phistar Lowars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A36184025B143FD00BFD9AC /* Debug */,
+				0A36184125B143FD00BFD9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A36184225B143FD00BFD9AC /* Build configuration list for PBXNativeTarget "Phistar Lowars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A36184325B143FD00BFD9AC /* Debug */,
+				0A36184425B143FD00BFD9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A36184525B143FD00BFD9AC /* Build configuration list for PBXNativeTarget "Phistar LowarsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A36184625B143FD00BFD9AC /* Debug */,
+				0A36184725B143FD00BFD9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A36184825B143FD00BFD9AC /* Build configuration list for PBXNativeTarget "Phistar LowarsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A36184925B143FD00BFD9AC /* Debug */,
+				0A36184A25B143FD00BFD9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A36181025B143FC00BFD9AC /* Project object */;
+}
