@@ -60,11 +60,6 @@ class SearchResultsTableViewController: UITableViewController {
         self.setupNavigationBar()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.searchController.searchBar.becomeFirstResponder()
-    }
-    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -138,7 +133,7 @@ class SearchResultsTableViewController: UITableViewController {
             let vehicle = self.filteredVehicles[indexPath.row]
             print(vehicle.name)
         default:
-            print("nothing")
+            print("No search category found for indexPath section \(indexPath.section)")
         }
     }
 

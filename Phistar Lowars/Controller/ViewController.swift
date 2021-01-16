@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    static let cornerRadius: CGFloat = 10.0
     
     @IBOutlet weak var searchButton: UIButton!
     
@@ -22,7 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.searchButton.titleLabel?.textAlignment = .center
-        self.searchButton.layer.cornerRadius = ViewController.cornerRadius
+        self.searchButton.layer.cornerRadius = Constants.CORNER_RADIUS
     }
 
 }

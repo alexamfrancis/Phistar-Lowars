@@ -11,7 +11,8 @@ class PersonDetailViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-
+    @IBOutlet weak var detailStackView: UIStackView!
+    
     private var person: Person
     
     init(person: Person) {
@@ -29,6 +30,20 @@ class PersonDetailViewController: UIViewController {
         self.imageView.image = UIImage(named: name)
         self.nameLabel.text = name
         self.imageView.layer.cornerRadius = self.imageView.frame.height / 2
+        self.setupDetailStackView()
+    }
+    
+    private func setupDetailStackView() {
+        let details = self.person.getDetails()
+        for detail in details {
+            let label = UILabel()
+            label.font = UIFont.preferredFont(forTextStyle: .body)
+            label.textAlignment = .center
+            label.lineBreakMode = .byWordWrapping
+            label.text = detail.capitalized
+            label.textColor = Constants.APP_COLOR
+            self.detailStackView.addArrangedSubview(label)
+        }
     }
 
 }
