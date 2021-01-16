@@ -68,7 +68,14 @@ class SearchResultsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return Categories.allCases.count
+        var count = Categories.allCases.count
+        if self.filteredPeople.isEmpty { count -= 1 }
+        if self.filteredFilms.isEmpty { count -= 1 }
+        if self.filteredPlanets.isEmpty { count -= 1 }
+        if self.filteredSpecies.isEmpty { count -= 1 }
+        if self.filteredStarships.isEmpty { count -= 1 }
+        if self.filteredVehicles.isEmpty { count -= 1 }
+        return count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
