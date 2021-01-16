@@ -49,21 +49,22 @@ class SearchResultsTableViewController: UITableViewController {
         return self.searchController.searchBar.text?.isEmpty ?? true ? NetworkManager.shared.species : NetworkManager.shared.species.filter({ $0.name!.lowercased().contains(self.searchController.searchBar.text?.lowercased() ?? "") })
     }
     var filteredStarships: [Starship] {
-        return self.searchController.searchBar.text?.isEmpty ?? true ? NetworkManager.shared.starships : NetworkManager.shared.starships.filter({ $0.name!.lowercased().contains(self.searchController.searchBar.text?.lowercased() ?? "") })
+        return self.searchController.searchBar.text?.isEmpty ?? true ? NetworkManager.shared.starships : NetworkManager.shared.starships.filter({ $0.name!.lowercased().contains(self.searchController.searchBar.text?.lowercased() ?? "") || $0.model!.lowercased().contains(self.searchController.searchBar.text?.lowercased() ?? "") })
     }
     var filteredVehicles: [Vehicle] {
-        return self.searchController.searchBar.text?.isEmpty ?? true ? NetworkManager.shared.vehicles : NetworkManager.shared.vehicles.filter({ $0.name!.lowercased().contains(self.searchController.searchBar.text?.lowercased() ?? "") })
+        return self.searchController.searchBar.text?.isEmpty ?? true ? NetworkManager.shared.vehicles : NetworkManager.shared.vehicles.filter({ $0.name!.lowercased().contains(self.searchController.searchBar.text?.lowercased() ?? "") || $0.model!.lowercased().contains(self.searchController.searchBar.text?.lowercased() ?? "") })
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.searchController.searchResultsUpdater = self
-        self.searchController.obscuresBackgroundDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Search Star Wars"
-        self.navigationItem.searchController = self.searchController
-        self.definesPresentationContext = true
+        self.setupNavigationBar()
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.searchController.searchBar.becomeFirstResponder()
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -114,6 +115,23 @@ class SearchResultsTableViewController: UITableViewController {
         return cell
     }
 
+    // MARK: - Helper functions
+    
+    private func setupNavigationBar() {
+        self.searchController.searchResultsUpdater = self
+        self.searchController.obscuresBackgroundDuringPresentation = false
+        self.searchController.searchBar.placeholder = "Search Star Wars"
+        self.navigationItem.hidesSearchBarWhenScrolling = false
+        self.navigationItem.searchController = self.searchController
+        self.navigationItem.title = "The World of Star Wars"
+        self.definesPresentationContext = true
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(self.close))
+    }
+    
+    @objc private func close() {
+        self.navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension SearchResultsTableViewController: UISearchResultsUpdating {

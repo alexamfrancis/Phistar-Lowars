@@ -22,6 +22,7 @@ class NetworkManager {
         self.getPeople()
         self.getFilms()
         self.getSpecies()
+        self.getPlanets()
         self.getStarships()
         self.getVehicles()
     }
