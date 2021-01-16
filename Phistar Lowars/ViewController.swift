@@ -8,22 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var searchBar: UISearchBar!
+    static let cornerRadius: CGFloat = 10.0
+    
+    @IBOutlet weak var searchButton: UIButton!
+    
+    @IBAction func searchButtonTapped(_ sender: UIButton) {
+        let searchVC = SearchResultsTableViewController()
+        let navVC = UINavigationController(rootViewController: searchVC)
+        navVC.modalPresentationStyle = .fullScreen
+        self.present(navVC, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchBar.delegate = self
+        self.searchButton.layer.cornerRadius = ViewController.cornerRadius
     }
 
-
-}
-
-extension ViewController: UISearchBarDelegate {
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        let results = NetworkManager.shared.people.filter({ $0.name!.lowercased().contains(searchText.lowercased()) })
-        print(results.map({ $0.name }))
-    }
-    
 }

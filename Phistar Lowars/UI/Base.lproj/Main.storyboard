@@ -16,29 +16,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" prompt="Search the world of Star Wars" placeholder="Darth Vader" translatesAutoresizingMaskIntoConstraints="NO" id="r9B-mm-DjP">
-                                <rect key="frame" x="40" y="403" width="334" height="90"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phistar Lowars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvj-3P-UD4">
-                                <rect key="frame" x="100" y="322" width="214" height="41"/>
+                                <rect key="frame" x="100" y="350.5" width="214" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" red="0.035212308169999998" green="0.1305960119" blue="0.25491473079999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lOq-Zl-RSe">
+                                <rect key="frame" x="40" y="431.5" width="334" height="33"/>
+                                <color key="backgroundColor" red="0.035212308169999998" green="0.1305960119" blue="0.25491473079999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
+                                <state key="normal" title="Search the world of Star Wars">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uMG-Sr-0iM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="r9B-mm-DjP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="KQ3-Kc-Lij"/>
-                            <constraint firstItem="r9B-mm-DjP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OIb-Dk-Eew"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lOq-Zl-RSe" secondAttribute="trailing" constant="40" id="CcO-0a-Ckg"/>
+                            <constraint firstItem="lOq-Zl-RSe" firstAttribute="top" secondItem="yvj-3P-UD4" secondAttribute="bottom" constant="40" id="ORI-vZ-WGa"/>
                             <constraint firstItem="yvj-3P-UD4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YR3-Oz-iUb"/>
-                            <constraint firstItem="r9B-mm-DjP" firstAttribute="top" secondItem="yvj-3P-UD4" secondAttribute="bottom" constant="40" id="lBn-LK-73e"/>
-                            <constraint firstItem="r9B-mm-DjP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-40" id="lpE-Hx-XVi"/>
+                            <constraint firstItem="lOq-Zl-RSe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="c22-Ux-qxG"/>
+                            <constraint firstItem="lOq-Zl-RSe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sAL-8M-nvN"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="searchBar" destination="r9B-mm-DjP" id="h0v-9n-fOk"/>
+                        <outlet property="searchButton" destination="lOq-Zl-RSe" id="aQc-N6-avd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

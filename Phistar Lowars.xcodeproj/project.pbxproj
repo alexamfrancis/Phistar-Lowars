@@ -25,6 +25,7 @@
 		0A36187625B1461300BFD9AC /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36187525B1461300BFD9AC /* Vehicle.swift */; };
 		0A36187F25B20D4500BFD9AC /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36187E25B20D4500BFD9AC /* Collection.swift */; };
 		0A56262E25B247BA006D75D1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56262D25B247BA006D75D1 /* NetworkManager.swift */; };
+		0A56263C25B26DD8006D75D1 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56263B25B26DD8006D75D1 /* SearchResultsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		0A36187525B1461300BFD9AC /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		0A36187E25B20D4500BFD9AC /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		0A56262D25B247BA006D75D1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0A56263B25B26DD8006D75D1 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				0A36181B25B143FC00BFD9AC /* AppDelegate.swift */,
 				0A36181D25B143FC00BFD9AC /* SceneDelegate.swift */,
 				0A36181F25B143FC00BFD9AC /* ViewController.swift */,
+				0A56263B25B26DD8006D75D1 /* SearchResultsTableViewController.swift */,
 				0A36187A25B1461800BFD9AC /* Model */,
 				0A36185825B145C800BFD9AC /* Network */,
 				0A56262925B23773006D75D1 /* UI */,
@@ -324,6 +327,7 @@
 				0A36181C25B143FC00BFD9AC /* AppDelegate.swift in Sources */,
 				0A36187625B1461300BFD9AC /* Vehicle.swift in Sources */,
 				0A36186C25B145F500BFD9AC /* Species.swift in Sources */,
+				0A56263C25B26DD8006D75D1 /* SearchResultsTableViewController.swift in Sources */,
 				0A36181E25B143FC00BFD9AC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
