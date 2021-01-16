@@ -68,14 +68,7 @@ class SearchResultsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        var count = Categories.allCases.count
-        if self.filteredPeople.isEmpty { count -= 1 }
-        if self.filteredFilms.isEmpty { count -= 1 }
-        if self.filteredPlanets.isEmpty { count -= 1 }
-        if self.filteredSpecies.isEmpty { count -= 1 }
-        if self.filteredStarships.isEmpty { count -= 1 }
-        if self.filteredVehicles.isEmpty { count -= 1 }
-        return count
+        return Categories.allCases.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -120,6 +113,32 @@ class SearchResultsTableViewController: UITableViewController {
             cell.textLabel?.text = ""
         }
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        switch Categories(rawValue: indexPath.section) {
+        case .films:
+            let film = self.filteredFilms[indexPath.row]
+            print(film.title)
+        case .people:
+            let person = self.filteredPeople[indexPath.row]
+            print(person.name)
+        case .planets:
+            let planet = self.filteredPlanets[indexPath.row]
+            print(planet.name)
+        case .species:
+            let species = self.filteredSpecies[indexPath.row]
+            print(species.name)
+        case .starships:
+            let starship = self.filteredStarships[indexPath.row]
+            print(starship.name)
+        case .vehicles:
+            let vehicle = self.filteredVehicles[indexPath.row]
+            print(vehicle.name)
+        default:
+            print("nothing")
+        }
     }
 
     // MARK: - Helper functions

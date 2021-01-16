@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.searchButton.titleLabel?.textAlignment = .center
         self.searchButton.layer.cornerRadius = ViewController.cornerRadius
     }
 
