@@ -123,7 +123,8 @@ class SearchResultsTableViewController: UITableViewController {
             print(film.title)
         case .people:
             let person = self.filteredPeople[indexPath.row]
-            print(person.name)
+            let personVC = PersonDetailViewController(person: person)
+            self.navigationController?.pushViewController(personVC, animated: true)
         case .planets:
             let planet = self.filteredPlanets[indexPath.row]
             print(planet.name)

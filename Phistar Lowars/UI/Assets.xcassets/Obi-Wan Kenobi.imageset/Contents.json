@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Obi-Wan Kenobi.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
