@@ -63,7 +63,7 @@
     <resources>
         <image name="logo" width="2501" height="1662"/>
         <namedColor name="AccentColor">
-            <color red="0.035459872339999997" green="0.12628349659999999" blue="0.26275873179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.035000000149011612" green="0.12600000202655792" blue="0.2630000114440918" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

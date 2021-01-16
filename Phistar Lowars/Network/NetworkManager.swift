@@ -18,13 +18,6 @@ class NetworkManager {
     var starships = [Starship]()
     var vehicles = [Vehicle]()
     
-    var personURLDictionary = [String: Person]()
-    var filmURLDictionary = [String: Film]()
-    var planetURLDictionary = [String: Planet]()
-    var speciesURLDictionary = [String: Species]()
-    var starshipURLDictionary = [String: Starship]()
-    var vehicleURLDictionary = [String: Vehicle]()
-
     init() {
         self.getPeople()
         self.getFilms()
@@ -40,10 +33,6 @@ class NetworkManager {
             case .success:
                 guard let collection = try? result.get(), let people = collection.results else { return }
                 self.people = people
-                for person in people {
-                    self.personURLDictionary[person.url!] = person
-                }
-                print("PEOPLE \(self.people.map({ $0.name }))")
             case .failure:
                 print(result)
             }
@@ -56,10 +45,6 @@ class NetworkManager {
             case .success:
                 guard let collection = try? result.get(), let films = collection.results else { return }
                 self.films = films
-                for film in films {
-                    self.filmURLDictionary[film.url!] = film
-                }
-                print("FILMS \(self.films.map({ $0.title }))")
             case .failure:
                 print(result)
             }
@@ -72,10 +57,6 @@ class NetworkManager {
             case .success:
                 guard let collection = try? result.get(), let planets = collection.results else { return }
                 self.planets = planets
-                for planet in planets {
-                    self.planetURLDictionary[planet.url!] = planet
-                }
-                print("PLANETS \(self.planets.map({ $0.name }))")
             case .failure:
                 print(result)
             }
@@ -88,10 +69,6 @@ class NetworkManager {
             case .success:
                 guard let collection = try? result.get(), let species = collection.results else { return }
                 self.species = species
-                for specie in species {
-                    self.speciesURLDictionary[specie.url!] = specie
-                }
-                print("SPECIES \(self.species.map({ $0.name }))")
             case .failure:
                 print(result)
             }
@@ -104,10 +81,6 @@ class NetworkManager {
             case .success:
                 guard let collection = try? result.get(), let starships = collection.results else { return }
                 self.starships = starships
-                for starship in starships {
-                    self.starshipURLDictionary[starship.url!] = starship
-                }
-                print("STARSHIPS \(self.starships.map({ $0.name }))")
             case .failure:
                 print(result)
             }
@@ -120,10 +93,6 @@ class NetworkManager {
             case .success:
                 guard let collection = try? result.get(), let vehicles = collection.results else { return }
                 self.vehicles = vehicles
-                for vehicle in vehicles {
-                    self.vehicleURLDictionary[vehicle.url!] = vehicle
-                }
-                print("VEHICLES \(self.vehicles.map({ $0.name }))")
             case .failure:
                 print(result)
             }
