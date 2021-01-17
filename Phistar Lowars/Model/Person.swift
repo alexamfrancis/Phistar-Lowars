@@ -50,7 +50,7 @@ class Person: Codable {
 extension Person: Detailable {
     
     func getDetails() -> [String] {
-        return ["Height: \(self.height!)", "Mass: \(self.mass!)", "Hair Color: \(self.hairColor!)", "Skin Color: \(self.skinColor!)", "Eye Color: \(self.eyeColor!)", "Birth Year: \(self.birthYear!)", "Gender: \(self.gender!)"]
+        return ["Height: \(self.height ?? "")", "Mass: \(self.mass ?? "")", "Hair Color: \(self.hairColor ?? "")", "Skin Color: \(self.skinColor ?? "")", "Eye Color: \(self.eyeColor ?? "")", "Birth Year: \(self.birthYear ?? "")", "Gender: \(self.gender ?? "")"]
     }
     
     func getMoreInfo() -> [Constants.SWCategory: [String]] {

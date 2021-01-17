@@ -54,7 +54,7 @@ class Starship: Codable {
 extension Starship: Detailable {
     
     func getDetails() -> [String] {
-        return ["Name: \(self.name!)", "Model: \(self.model!)", "Manufacturer: \(self.manufacturer!)", "Cost in Credits: \(self.costInCredits!)", "Length: \(self.length!)", "Max Atmosphering Speed: \(self.maxAtmospheringSpeed!)", "Crew: \(self.crew!)", "Passengers: \(self.passengers!)", "Cargo Capacity: \(self.cargoCapacity!)", "Consumables: \(self.consumables!)", "Hyperdrive Rating: \(self.hyperdriveRating!)", "MGLT: \(self.mglt!)", "Starship Class: \(self.starshipClass!)"]
+        return ["Name: \(self.name ?? "")", "Model: \(self.model ?? "")", "Manufacturer: \(self.manufacturer ?? "")", "Cost in Credits: \(self.costInCredits ?? "")", "Length: \(self.length ?? "")", "Max Atmosphering Speed: \(self.maxAtmospheringSpeed ?? "")", "Crew: \(self.crew ?? "")", "Passengers: \(self.passengers ?? "")", "Cargo Capacity: \(self.cargoCapacity ?? "")", "Consumables: \(self.consumables ?? "")", "Hyperdrive Rating: \(self.hyperdriveRating ?? "")", "MGLT: \(self.mglt ?? "")", "Starship Class: \(self.starshipClass ?? "")"]
     }
     
     func getMoreInfo() -> [Constants.SWCategory: [String]] {

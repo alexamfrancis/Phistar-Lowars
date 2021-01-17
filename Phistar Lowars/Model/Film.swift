@@ -55,7 +55,7 @@ extension Film: Detailable {
     
     
     func getDetails() -> [String] {
-        return ["Title: \(self.title!)", "Episode ID: \(self.episodeId!)", "Opening Crawl: \(self.openingCrawl!)", "Director: \(self.director!)", "Producer: \(self.producer!)", "Release Date: \(self.releaseDate!)"]
+        return ["Title: \(self.title ?? "")", "Episode \(self.episodeId ?? 0)", "Opening Crawl: \(self.openingCrawl ?? "")", "Director: \(self.director ?? "")", "Producer: \(self.producer ?? "")", "Release Date: \(self.releaseDate ?? "")"]
     }
     
     func getMoreInfo() -> [Constants.SWCategory: [String]] {

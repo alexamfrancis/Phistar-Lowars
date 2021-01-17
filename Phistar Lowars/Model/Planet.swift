@@ -46,7 +46,7 @@ class Planet: Codable {
 extension Planet: Detailable {
     
     func getDetails() -> [String] {
-        return ["Name: \(self.name!)", "Rotation Perios: \(self.rotationPeriod!)", "Orbital Period: \(self.orbitalPeriod!)", "Diameter: \(self.diameter!)", "Climate: \(self.climate!)", "Gravity: \(self.gravity!)", "Terrain: \(self.terrain!)", "Surface Water: \(self.surfaceWater!)", "Population: \(self.population!)"]
+        return ["Name: \(self.name ?? "")", "Rotation Perios: \(self.rotationPeriod ?? "")", "Orbital Period: \(self.orbitalPeriod ?? "")", "Diameter: \(self.diameter ?? "")", "Climate: \(self.climate ?? "")", "Gravity: \(self.gravity ?? "")", "Terrain: \(self.terrain ?? "")", "Surface Water: \(self.surfaceWater ?? "")", "Population: \(self.population ?? "")"]
     }
     
     func getMoreInfo() -> [Constants.SWCategory: [String]] {

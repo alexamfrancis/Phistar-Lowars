@@ -50,7 +50,7 @@ class Vehicle: Codable {
 extension Vehicle: Detailable {
     
     func getDetails() -> [String] {
-        return ["Name: \(self.name!)", "Model: \(self.model!)", "Manufacturer: \(self.manufacturer!)", "Cost in Credits: \(self.costInCredits!)", "Length: \(self.length!)", "Max Atmosphering Speed: \(self.maxAtmospheringSpeed!)", "Crew: \(self.crew!)", "Passengers: \(self.passengers!)", "Cargo Capacity: \(self.cargoCapacity!)", "Consumables: \(self.consumables!)", "Vehicle Class: \(self.vehicleClass!)"]
+        return ["Name: \(self.name ?? "")", "Model: \(self.model ?? "")", "Manufacturer: \(self.manufacturer ?? "")", "Cost in Credits: \(self.costInCredits ?? "")", "Length: \(self.length ?? "")", "Max Atmosphering Speed: \(self.maxAtmospheringSpeed ?? "")", "Crew: \(self.crew ?? "")", "Passengers: \(self.passengers ?? "")", "Cargo Capacity: \(self.cargoCapacity ?? "")", "Consumables: \(self.consumables ?? "")", "Vehicle Class: \(self.vehicleClass ?? "")"]
     }
     
     func getMoreInfo() -> [Constants.SWCategory: [String]] {
