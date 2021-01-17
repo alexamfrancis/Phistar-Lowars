@@ -2,9 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,29 +17,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" prompt="Search the world of Star Wars" placeholder="Darth Vader" translatesAutoresizingMaskIntoConstraints="NO" id="r9B-mm-DjP">
-                                <rect key="frame" x="40" y="403" width="334" height="90"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phistar Lowars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvj-3P-UD4">
-                                <rect key="frame" x="100" y="322" width="214" height="41"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <color key="textColor" red="0.035212308169999998" green="0.1305960119" blue="0.25491473079999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="leL-8L-H18">
+                                <rect key="frame" x="20" y="127" width="374" height="261"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="leL-8L-H18" secondAttribute="height" multiplier="374:261" id="jFb-U5-j5e"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lOq-Zl-RSe">
+                                <rect key="frame" x="40" y="408" width="334" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="AYn-4C-OmS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
+                                <state key="normal" title="Search the world of Star Wars">
+                                    <color key="titleColor" red="0.90766608719999997" green="0.77698534730000002" blue="0.30967089530000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" red="0.035212308169999998" green="0.1305960119" blue="0.25491473079999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uMG-Sr-0iM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="AccentColor"/>
                         <constraints>
-                            <constraint firstItem="r9B-mm-DjP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="KQ3-Kc-Lij"/>
-                            <constraint firstItem="r9B-mm-DjP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OIb-Dk-Eew"/>
-                            <constraint firstItem="yvj-3P-UD4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YR3-Oz-iUb"/>
-                            <constraint firstItem="r9B-mm-DjP" firstAttribute="top" secondItem="yvj-3P-UD4" secondAttribute="bottom" constant="40" id="lBn-LK-73e"/>
-                            <constraint firstItem="r9B-mm-DjP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-40" id="lpE-Hx-XVi"/>
+                            <constraint firstItem="leL-8L-H18" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9fg-d8-BbK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lOq-Zl-RSe" secondAttribute="trailing" constant="40" id="CcO-0a-Ckg"/>
+                            <constraint firstItem="leL-8L-H18" firstAttribute="bottom" secondItem="lOq-Zl-RSe" secondAttribute="top" constant="-20" id="KoR-IT-VLx"/>
+                            <constraint firstItem="lOq-Zl-RSe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="c22-Ux-qxG"/>
+                            <constraint firstItem="lOq-Zl-RSe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sAL-8M-nvN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="leL-8L-H18" secondAttribute="trailing" constant="20" id="szK-8L-Yat"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="searchBar" destination="r9B-mm-DjP" id="h0v-9n-fOk"/>
+                        <outlet property="searchButton" destination="lOq-Zl-RSe" id="aQc-N6-avd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -47,8 +61,9 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="logo" width="2501" height="1662"/>
+        <namedColor name="AccentColor">
+            <color red="0.035000000149011612" green="0.12600000202655792" blue="0.2630000114440918" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>

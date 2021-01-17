@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "C-3PO.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

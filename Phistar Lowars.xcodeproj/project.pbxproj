@@ -24,7 +24,13 @@
 		0A36187125B1460A00BFD9AC /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36187025B1460A00BFD9AC /* Starship.swift */; };
 		0A36187625B1461300BFD9AC /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36187525B1461300BFD9AC /* Vehicle.swift */; };
 		0A36187F25B20D4500BFD9AC /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36187E25B20D4500BFD9AC /* Collection.swift */; };
+		0A505AFC25B4A14F0072221C /* MoreInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A505AFB25B4A14F0072221C /* MoreInfoTableViewController.swift */; };
+		0A505B0425B4BC280072221C /* StarWarsObjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A505B0325B4BC280072221C /* StarWarsObjectTableViewController.swift */; };
 		0A56262E25B247BA006D75D1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56262D25B247BA006D75D1 /* NetworkManager.swift */; };
+		0A56263C25B26DD8006D75D1 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56263B25B26DD8006D75D1 /* SearchResultsTableViewController.swift */; };
+		0A56264B25B2C4F1006D75D1 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56264925B2C4F1006D75D1 /* PersonDetailViewController.swift */; };
+		0A56264C25B2C4F1006D75D1 /* PersonDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A56264A25B2C4F1006D75D1 /* PersonDetailViewController.xib */; };
+		0A56265525B38A7F006D75D1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56265425B38A7E006D75D1 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +74,13 @@
 		0A36187025B1460A00BFD9AC /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
 		0A36187525B1461300BFD9AC /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		0A36187E25B20D4500BFD9AC /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		0A505AFB25B4A14F0072221C /* MoreInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoTableViewController.swift; sourceTree = "<group>"; };
+		0A505B0325B4BC280072221C /* StarWarsObjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsObjectTableViewController.swift; sourceTree = "<group>"; };
 		0A56262D25B247BA006D75D1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0A56263B25B26DD8006D75D1 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
+		0A56264925B2C4F1006D75D1 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
+		0A56264A25B2C4F1006D75D1 /* PersonDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonDetailViewController.xib; sourceTree = "<group>"; };
+		0A56265425B38A7E006D75D1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +133,8 @@
 			children = (
 				0A36181B25B143FC00BFD9AC /* AppDelegate.swift */,
 				0A36181D25B143FC00BFD9AC /* SceneDelegate.swift */,
-				0A36181F25B143FC00BFD9AC /* ViewController.swift */,
+				0A56265425B38A7E006D75D1 /* Constants.swift */,
+				0A56265025B2C4FF006D75D1 /* Controller */,
 				0A36187A25B1461800BFD9AC /* Model */,
 				0A36185825B145C800BFD9AC /* Network */,
 				0A56262925B23773006D75D1 /* UI */,
@@ -176,10 +189,23 @@
 			isa = PBXGroup;
 			children = (
 				0A36182125B143FC00BFD9AC /* Main.storyboard */,
+				0A56264A25B2C4F1006D75D1 /* PersonDetailViewController.xib */,
 				0A36182425B143FD00BFD9AC /* Assets.xcassets */,
 				0A36182625B143FD00BFD9AC /* LaunchScreen.storyboard */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		0A56265025B2C4FF006D75D1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0A36181F25B143FC00BFD9AC /* ViewController.swift */,
+				0A56263B25B26DD8006D75D1 /* SearchResultsTableViewController.swift */,
+				0A505B0325B4BC280072221C /* StarWarsObjectTableViewController.swift */,
+				0A56264925B2C4F1006D75D1 /* PersonDetailViewController.swift */,
+				0A505AFB25B4A14F0072221C /* MoreInfoTableViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A56264C25B2C4F1006D75D1 /* PersonDetailViewController.xib in Resources */,
 				0A36182825B143FD00BFD9AC /* LaunchScreen.storyboard in Resources */,
 				0A36182525B143FD00BFD9AC /* Assets.xcassets in Resources */,
 				0A36182325B143FC00BFD9AC /* Main.storyboard in Resources */,
@@ -313,17 +340,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A36185425B1455800BFD9AC /* ServiceLayer.swift in Sources */,
+				0A505B0425B4BC280072221C /* StarWarsObjectTableViewController.swift in Sources */,
 				0A36187125B1460A00BFD9AC /* Starship.swift in Sources */,
 				0A36185D25B145D200BFD9AC /* Film.swift in Sources */,
 				0A56262E25B247BA006D75D1 /* NetworkManager.swift in Sources */,
 				0A36187F25B20D4500BFD9AC /* Collection.swift in Sources */,
+				0A505AFC25B4A14F0072221C /* MoreInfoTableViewController.swift in Sources */,
 				0A36184F25B1440800BFD9AC /* Router.swift in Sources */,
 				0A36186725B145DE00BFD9AC /* Planet.swift in Sources */,
+				0A56265525B38A7F006D75D1 /* Constants.swift in Sources */,
 				0A36182025B143FC00BFD9AC /* ViewController.swift in Sources */,
+				0A56264B25B2C4F1006D75D1 /* PersonDetailViewController.swift in Sources */,
 				0A36186225B145D800BFD9AC /* Person.swift in Sources */,
 				0A36181C25B143FC00BFD9AC /* AppDelegate.swift in Sources */,
 				0A36187625B1461300BFD9AC /* Vehicle.swift in Sources */,
 				0A36186C25B145F500BFD9AC /* Species.swift in Sources */,
+				0A56263C25B26DD8006D75D1 /* SearchResultsTableViewController.swift in Sources */,
 				0A36181E25B143FC00BFD9AC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,7 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -485,7 +517,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -501,6 +533,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = CZLU3AZUPD;
 				INFOPLIST_FILE = "Phistar Lowars/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -520,6 +553,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = CZLU3AZUPD;
 				INFOPLIST_FILE = "Phistar Lowars/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

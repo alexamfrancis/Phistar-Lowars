@@ -2,7 +2,7 @@
 //  Film.swift
 //  Phistar Lowars
 //
-//  Created by Alexandra Francis on 1/14/21.
+//  Created by Philo's #1 Applicant on 1/16/21.
 //
 
 import Foundation
@@ -23,7 +23,7 @@ struct Film: Codable {
     var created: String?
     var edited: String?
     var url: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case title
         case episodeId = "episode_id"
@@ -41,4 +41,25 @@ struct Film: Codable {
         case url
     }
 
+}
+
+extension Film: Detailable {
+    var name: String? {
+        get {
+            return self.title
+        }
+        set {
+            self.title = newValue
+        }
+    }
+    
+    
+    func getDetails() -> [String] {
+        return ["Title: \(self.title ?? "")", "Episode \(self.episodeId ?? 0)", "Opening Crawl: \(self.openingCrawl ?? "")", "Director: \(self.director ?? "")", "Producer: \(self.producer ?? "")", "Release Date: \(self.releaseDate ?? "")"]
+    }
+    
+    func getMoreInfo() -> [Constants.SWCategory: [String]] {
+        return [.people: self.characters ?? [], .planets: self.planets ?? [], .starships: self.starships ?? [], .vehicles: self.vehicles ?? [], .species: self.species ?? []]
+    }
+    
 }

@@ -2,7 +2,7 @@
 //  Starship.swift
 //  Phistar Lowars
 //
-//  Created by Alexandra Francis on 1/14/21.
+//  Created by Philo's #1 Applicant on 1/16/21.
 //
 
 import Foundation
@@ -51,3 +51,14 @@ class Starship: Codable {
 
 }
 
+extension Starship: Detailable {
+    
+    func getDetails() -> [String] {
+        return ["Name: \(self.name ?? "")", "Model: \(self.model ?? "")", "Manufacturer: \(self.manufacturer ?? "")", "Cost in Credits: \(self.costInCredits ?? "")", "Length: \(self.length ?? "")", "Max Atmosphering Speed: \(self.maxAtmospheringSpeed ?? "")", "Crew: \(self.crew ?? "")", "Passengers: \(self.passengers ?? "")", "Cargo Capacity: \(self.cargoCapacity ?? "")", "Consumables: \(self.consumables ?? "")", "Hyperdrive Rating: \(self.hyperdriveRating ?? "")", "MGLT: \(self.mglt ?? "")", "Starship Class: \(self.starshipClass ?? "")"]
+    }
+    
+    func getMoreInfo() -> [Constants.SWCategory: [String]] {
+        return [.people: self.pilots ?? [], .films: self.films ?? []]
+    }
+    
+}
