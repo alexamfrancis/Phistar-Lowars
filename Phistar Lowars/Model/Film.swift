@@ -23,7 +23,7 @@ struct Film: Codable {
     var created: String?
     var edited: String?
     var url: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case title
         case episodeId = "episode_id"
@@ -44,13 +44,22 @@ struct Film: Codable {
 }
 
 extension Film: Detailable {
+    var name: String? {
+        get {
+            return self.title
+        }
+        set {
+            self.title = newValue
+        }
+    }
+    
     
     func getDetails() -> [String] {
         return ["Title: \(self.title!)", "Episode ID: \(self.episodeId!)", "Opening Crawl: \(self.openingCrawl!)", "Director: \(self.director!)", "Producer: \(self.producer!)", "Release Date: \(self.releaseDate!)"]
     }
     
-    func getMoreInfo() -> [String: [String]] {
-        return [Constants.CATEGORY_PERSON: self.characters ?? [], Constants.CATEGORY_PLANET: self.planets ?? [], Constants.CATEGORY_STARSHIP: self.starships ?? [], Constants.CATEGORY_VEHICLE: self.vehicles ?? [], Constants.CATEGORY_SPECIES: self.species ?? []]
+    func getMoreInfo() -> [Constants.SWCategory: [String]] {
+        return [.people: self.characters ?? [], .planets: self.planets ?? [], .starships: self.starships ?? [], .vehicles: self.vehicles ?? [], .species: self.species ?? []]
     }
     
 }

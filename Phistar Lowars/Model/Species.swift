@@ -51,8 +51,8 @@ extension Species: Detailable {
         return ["Name: \(self.name!)", "Classification: \(self.classification!)", "Designation: \(self.designation!)", "Average Height: \(self.averageHeight!)", "Skin Colors: \(self.skinColors!)", "Hair Colors: \(self.hairColors!)", "Eye Colors: \(self.eyeColors!)", "Average Lifespan: \(self.averageLifespan!)"]
     }
     
-    func getMoreInfo() -> [String: [String]] {
-        return [Constants.CATEGORY_PERSON: self.people ?? [], Constants.CATEGORY_PLANET: [self.homeworld ?? "N/A"], Constants.CATEGORY_FILM: self.films ?? []]
+    func getMoreInfo() -> [Constants.SWCategory: [String]] {
+        return [.people: self.people ?? [], .planets: [self.homeworld ?? "N/A"], .films: self.films ?? []]
     }
     
 }

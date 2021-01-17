@@ -53,8 +53,8 @@ extension Person: Detailable {
         return ["Height: \(self.height!)", "Mass: \(self.mass!)", "Hair Color: \(self.hairColor!)", "Skin Color: \(self.skinColor!)", "Eye Color: \(self.eyeColor!)", "Birth Year: \(self.birthYear!)", "Gender: \(self.gender!)"]
     }
     
-    func getMoreInfo() -> [String: [String]] {
-        return [Constants.CATEGORY_FILM: self.films ?? [], Constants.CATEGORY_PLANET: [self.homeworld ?? "N/A"], Constants.CATEGORY_STARSHIP: self.starships ?? [], Constants.CATEGORY_VEHICLE: self.vehicles ?? [], Constants.CATEGORY_SPECIES: self.species ?? []]
+    func getMoreInfo() -> [Constants.SWCategory: [String]] {
+        return [.films: self.films ?? [], .planets: [self.homeworld ?? "N/A"], .starships: self.starships ?? [], .vehicles: self.vehicles ?? [], .species: self.species ?? []]
     }
     
 }

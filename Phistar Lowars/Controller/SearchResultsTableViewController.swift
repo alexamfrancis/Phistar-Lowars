@@ -115,23 +115,33 @@ class SearchResultsTableViewController: UITableViewController {
         switch Categories(rawValue: indexPath.section) {
         case .films:
             let film = self.filteredFilms[indexPath.row]
-            print(film.title)
+            let swObjectVC = StarWarsObjectTableViewController()
+            swObjectVC.starWarsObject = film
+            self.navigationController?.pushViewController(swObjectVC, animated: true)
         case .people:
             let person = self.filteredPeople[indexPath.row]
             let personVC = PersonDetailViewController(person: person)
             self.navigationController?.pushViewController(personVC, animated: true)
         case .planets:
             let planet = self.filteredPlanets[indexPath.row]
-            print(planet.name)
+            let swObjectVC = StarWarsObjectTableViewController()
+            swObjectVC.starWarsObject = planet
+            self.navigationController?.pushViewController(swObjectVC, animated: true)
         case .species:
             let species = self.filteredSpecies[indexPath.row]
-            print(species.name)
+            let swObjectVC = StarWarsObjectTableViewController()
+            swObjectVC.starWarsObject = species
+            self.navigationController?.pushViewController(swObjectVC, animated: true)
         case .starships:
             let starship = self.filteredStarships[indexPath.row]
-            print(starship.name)
+            let swObjectVC = StarWarsObjectTableViewController()
+            swObjectVC.starWarsObject = starship
+            self.navigationController?.pushViewController(swObjectVC, animated: true)
         case .vehicles:
             let vehicle = self.filteredVehicles[indexPath.row]
-            print(vehicle.name)
+            let swObjectVC = StarWarsObjectTableViewController()
+            swObjectVC.starWarsObject = vehicle
+            self.navigationController?.pushViewController(swObjectVC, animated: true)
         default:
             print("No search category found for indexPath section \(indexPath.section)")
         }

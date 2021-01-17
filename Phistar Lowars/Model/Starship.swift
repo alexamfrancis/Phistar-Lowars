@@ -57,8 +57,8 @@ extension Starship: Detailable {
         return ["Name: \(self.name!)", "Model: \(self.model!)", "Manufacturer: \(self.manufacturer!)", "Cost in Credits: \(self.costInCredits!)", "Length: \(self.length!)", "Max Atmosphering Speed: \(self.maxAtmospheringSpeed!)", "Crew: \(self.crew!)", "Passengers: \(self.passengers!)", "Cargo Capacity: \(self.cargoCapacity!)", "Consumables: \(self.consumables!)", "Hyperdrive Rating: \(self.hyperdriveRating!)", "MGLT: \(self.mglt!)", "Starship Class: \(self.starshipClass!)"]
     }
     
-    func getMoreInfo() -> [String: [String]] {
-        return [Constants.CATEGORY_PERSON: self.pilots ?? [], Constants.CATEGORY_FILM: self.films ?? []]
+    func getMoreInfo() -> [Constants.SWCategory: [String]] {
+        return [.people: self.pilots ?? [], .films: self.films ?? []]
     }
     
 }

@@ -49,8 +49,8 @@ extension Planet: Detailable {
         return ["Name: \(self.name!)", "Rotation Perios: \(self.rotationPeriod!)", "Orbital Period: \(self.orbitalPeriod!)", "Diameter: \(self.diameter!)", "Climate: \(self.climate!)", "Gravity: \(self.gravity!)", "Terrain: \(self.terrain!)", "Surface Water: \(self.surfaceWater!)", "Population: \(self.population!)"]
     }
     
-    func getMoreInfo() -> [String: [String]] {
-        return [Constants.CATEGORY_PERSON: self.residents ?? [], Constants.CATEGORY_FILM: self.films ?? []]
+    func getMoreInfo() -> [Constants.SWCategory: [String]] {
+        return [.people: self.residents ?? [], .films: self.films ?? []]
     }
     
 }

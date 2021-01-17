@@ -14,10 +14,12 @@ class PersonDetailViewController: UIViewController {
     @IBOutlet weak var detailStackView: UIStackView!
     
     private var person: Person
+    private var moreInfoData = [Constants.SWCategory: [Detailable]]()
     
     init(person: Person) {
         self.person = person
         super.init(nibName: "PersonDetailViewController", bundle: Bundle.main)
+        self.populateMoreInfoDate()
     }
     
     required init?(coder: NSCoder) {
@@ -58,42 +60,45 @@ class PersonDetailViewController: UIViewController {
     @objc private func moreInfoTapped() {
         // TODO: make network request for more info show more info view
         print("User tapped more info on person \(self.person.name ?? "")")
+        let detailInfoVC = MoreInfoTableViewController()
+        detailInfoVC.detailData = self.moreInfoData
+        detailInfoVC.detailObject = self.person
+        self.navigationController?.pushViewController(detailInfoVC, animated: true)
+    }
+
+    private func populateMoreInfoDate() {
         let moreInfo = self.person.getMoreInfo()
         for (key, value) in moreInfo {
+            self.moreInfoData[key] = [Detailable]()
             for url in value {
                 switch key {
-                case Constants.CATEGORY_FILM:
+                case .films:
                     NetworkManager.shared.getFilmObject(for: url) { film in
-                        print(film.title)
+                        self.moreInfoData[key]?.append(film)
                     }
-                case Constants.CATEGORY_PERSON:
+                case .people:
                     NetworkManager.shared.getPersonObject(for: url) { person in
-                        print(person.name)
+                        self.moreInfoData[key]?.append(person)
                     }
-                case Constants.CATEGORY_PLANET:
+                case .planets:
                     NetworkManager.shared.getPlanetObject(for: url) { planet in
-                        print(planet.name)
+                        self.moreInfoData[key]?.append(planet)
                     }
-                case Constants.CATEGORY_SPECIES:
+                case .species:
                     NetworkManager.shared.getSpeciesObject(for: url) { species in
-                        print(species.name)
+                        self.moreInfoData[key]?.append(species)
                     }
-                case Constants.CATEGORY_STARSHIP:
+                case .starships:
                     NetworkManager.shared.getStarshipObject(for: url) { starship in
-                        print(starship.name)
+                        self.moreInfoData[key]?.append(starship)
                     }
-                case Constants.CATEGORY_VEHICLE:
+                case .vehicles:
                     NetworkManager.shared.getVehicleObject(for: url) { vehicle in
-                        print(vehicle.name)
+                        self.moreInfoData[key]?.append(vehicle)
                     }
-                default:
-                    print("FAILED to find (key: \(key), value \(value))")
                 }
                 
             }
         }
-
-        print(moreInfo)
     }
-
 }

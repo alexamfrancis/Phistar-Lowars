@@ -19,7 +19,10 @@ struct Collection <T: Codable>: Codable {
 
 protocol Detailable {
     
+    var name: String? { get set }
+    var url: String? { get set }
+    
     func getDetails() -> [String]
-    func getMoreInfo() -> [String: [String]]
+    func getMoreInfo() -> [Constants.SWCategory: [String]]
     
 }
