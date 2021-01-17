@@ -2,7 +2,7 @@
 //  StarWarsObjectTableViewController.swift
 //  Phistar Lowars
 //
-//  Created by Alexandra Francis on 1/17/21.
+//  Created by Philo's #1 Applicant on 1/17/21.
 //
 
 import UIKit
@@ -52,10 +52,15 @@ class StarWarsObjectTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let index = self.moreInfoData.index(self.moreInfoData.startIndex, offsetBy: indexPath.section - 1)
-        let detailable = self.moreInfoData[index].value[indexPath.row]
-        let swObjectVC = StarWarsObjectTableViewController()
-        swObjectVC.starWarsObject = detailable
-        self.navigationController?.pushViewController(swObjectVC, animated: true)
+        if self.moreInfoData.keys[index] == .people, let person = self.moreInfoData[index].value[indexPath.row] as? Person {
+            let personVC = PersonDetailViewController(person: person)
+            self.navigationController?.pushViewController(personVC, animated: true)
+        } else {
+            let detailable = self.moreInfoData[index].value[indexPath.row]
+            let swObjectVC = StarWarsObjectTableViewController()
+            swObjectVC.starWarsObject = detailable
+            self.navigationController?.pushViewController(swObjectVC, animated: true)
+        }
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

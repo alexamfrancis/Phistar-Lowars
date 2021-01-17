@@ -2,7 +2,7 @@
 //  Collection.swift
 //  Phistar Lowars
 //
-//  Created by Alexandra Francis on 1/15/21.
+//  Created by Philo's #1 Applicant on 1/16/21.
 //
 
 import Foundation

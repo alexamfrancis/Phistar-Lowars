@@ -2,7 +2,7 @@
 //  PersonDetailViewController.swift
 //  Phistar Lowars
 //
-//  Created by Alexandra Francis on 1/15/21.
+//  Created by Philo's #1 Applicant on 1/16/21.
 //
 
 import UIKit
@@ -59,7 +59,6 @@ class PersonDetailViewController: UIViewController {
     
     @objc private func moreInfoTapped() {
         // TODO: make network request for more info show more info view
-        print("User tapped more info on person \(self.person.name ?? "")")
         let detailInfoVC = MoreInfoTableViewController()
         detailInfoVC.detailData = self.moreInfoData
         detailInfoVC.detailObject = self.person
@@ -74,27 +73,39 @@ class PersonDetailViewController: UIViewController {
                 switch key {
                 case .films:
                     NetworkManager.shared.getFilmObject(for: url) { film in
-                        self.moreInfoData[key]?.append(film)
+                        if !(self.moreInfoData[key]?.contains(where: { $0.name == film.name }) ?? false) {
+                            self.moreInfoData[key]?.append(film)
+                        }
                     }
                 case .people:
                     NetworkManager.shared.getPersonObject(for: url) { person in
-                        self.moreInfoData[key]?.append(person)
+                        if !(self.moreInfoData[key]?.contains(where: { $0.name == person.name }) ?? false) {
+                            self.moreInfoData[key]?.append(person)
+                        }
                     }
                 case .planets:
                     NetworkManager.shared.getPlanetObject(for: url) { planet in
-                        self.moreInfoData[key]?.append(planet)
+                        if !(self.moreInfoData[key]?.contains(where: { $0.name == planet.name }) ?? false) {
+                            self.moreInfoData[key]?.append(planet)
+                        }
                     }
                 case .species:
                     NetworkManager.shared.getSpeciesObject(for: url) { species in
-                        self.moreInfoData[key]?.append(species)
+                        if !(self.moreInfoData[key]?.contains(where: { $0.name == species.name }) ?? false) {
+                            self.moreInfoData[key]?.append(species)
+                        }
                     }
                 case .starships:
                     NetworkManager.shared.getStarshipObject(for: url) { starship in
-                        self.moreInfoData[key]?.append(starship)
+                        if !(self.moreInfoData[key]?.contains(where: { $0.name == starship.name }) ?? false) {
+                            self.moreInfoData[key]?.append(starship)
+                        }
                     }
                 case .vehicles:
                     NetworkManager.shared.getVehicleObject(for: url) { vehicle in
-                        self.moreInfoData[key]?.append(vehicle)
+                        if !(self.moreInfoData[key]?.contains(where: { $0.name == vehicle.name }) ?? false) {
+                            self.moreInfoData[key]?.append(vehicle)
+                        }
                     }
                 }
                 

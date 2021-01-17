@@ -43,7 +43,6 @@ class MoreInfoTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let index = self.detailData.index(self.detailData.startIndex, offsetBy: indexPath.section)
         let detailable = self.detailData[index].value[indexPath.row]
         let detailVC = MoreInfoTableViewController()
         detailVC.detailObject = detailable
