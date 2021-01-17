@@ -44,3 +44,15 @@ class Species: Codable {
     }
     
 }
+
+extension Species: Detailable {
+    
+    func getDetails() -> [String] {
+        return ["Name: \(self.name!)", "Classification: \(self.classification!)", "Designation: \(self.designation!)", "Average Height: \(self.averageHeight!)", "Skin Colors: \(self.skinColors!)", "Hair Colors: \(self.hairColors!)", "Eye Colors: \(self.eyeColors!)", "Average Lifespan: \(self.averageLifespan!)"]
+    }
+    
+    func getMoreInfo() -> [String: [String]] {
+        return [Constants.CATEGORY_PERSON: self.people ?? [], Constants.CATEGORY_PLANET: [self.homeworld ?? "N/A"], Constants.CATEGORY_FILM: self.films ?? []]
+    }
+    
+}

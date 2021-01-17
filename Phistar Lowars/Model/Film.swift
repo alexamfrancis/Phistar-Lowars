@@ -42,3 +42,15 @@ struct Film: Codable {
     }
 
 }
+
+extension Film: Detailable {
+    
+    func getDetails() -> [String] {
+        return ["Title: \(self.title!)", "Episode ID: \(self.episodeId!)", "Opening Crawl: \(self.openingCrawl!)", "Director: \(self.director!)", "Producer: \(self.producer!)", "Release Date: \(self.releaseDate!)"]
+    }
+    
+    func getMoreInfo() -> [String: [String]] {
+        return [Constants.CATEGORY_PERSON: self.characters ?? [], Constants.CATEGORY_PLANET: self.planets ?? [], Constants.CATEGORY_STARSHIP: self.starships ?? [], Constants.CATEGORY_VEHICLE: self.vehicles ?? [], Constants.CATEGORY_SPECIES: self.species ?? []]
+    }
+    
+}

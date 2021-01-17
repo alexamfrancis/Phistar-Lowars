@@ -44,6 +44,56 @@ class PersonDetailViewController: UIViewController {
             label.textColor = Constants.APP_COLOR
             self.detailStackView.addArrangedSubview(label)
         }
+        let button = UIButton()
+        button.clipsToBounds = false
+        button.layer.cornerRadius = Constants.CORNER_RADIUS
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = Constants.APP_COLOR
+        button.setTitle("   More Info...   ", for: .normal)
+        button.titleLabel?.font = UIFont.preferredFont(forTextStyle: .caption1)
+        button.addTarget(self, action: #selector(self.moreInfoTapped), for: .touchUpInside)
+        self.detailStackView.addArrangedSubview(button)
+    }
+    
+    @objc private func moreInfoTapped() {
+        // TODO: make network request for more info show more info view
+        print("User tapped more info on person \(self.person.name ?? "")")
+        let moreInfo = self.person.getMoreInfo()
+        for (key, value) in moreInfo {
+            for url in value {
+                switch key {
+                case Constants.CATEGORY_FILM:
+                    NetworkManager.shared.getFilmObject(for: url) { film in
+                        print(film.title)
+                    }
+                case Constants.CATEGORY_PERSON:
+                    NetworkManager.shared.getPersonObject(for: url) { person in
+                        print(person.name)
+                    }
+                case Constants.CATEGORY_PLANET:
+                    NetworkManager.shared.getPlanetObject(for: url) { planet in
+                        print(planet.name)
+                    }
+                case Constants.CATEGORY_SPECIES:
+                    NetworkManager.shared.getSpeciesObject(for: url) { species in
+                        print(species.name)
+                    }
+                case Constants.CATEGORY_STARSHIP:
+                    NetworkManager.shared.getStarshipObject(for: url) { starship in
+                        print(starship.name)
+                    }
+                case Constants.CATEGORY_VEHICLE:
+                    NetworkManager.shared.getVehicleObject(for: url) { vehicle in
+                        print(vehicle.name)
+                    }
+                default:
+                    print("FAILED to find (key: \(key), value \(value))")
+                }
+                
+            }
+        }
+
+        print(moreInfo)
     }
 
 }

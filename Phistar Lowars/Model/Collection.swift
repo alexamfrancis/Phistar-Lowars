@@ -16,3 +16,10 @@ struct Collection <T: Codable>: Codable {
     var results: [T]?
     
 }
+
+protocol Detailable {
+    
+    func getDetails() -> [String]
+    func getMoreInfo() -> [String: [String]]
+    
+}

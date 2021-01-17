@@ -45,33 +45,16 @@ class Person: Codable {
         case url
     }
     
+}
+
+extension Person: Detailable {
+    
     func getDetails() -> [String] {
-        return ["Height: \(self.height!)", "Mass: \(self.mass!)", "Hair Color: \(self.hairColor!)", "Skin Color: \(self.skinColor!)", "Eye Color: \(self.eyeColor!)", "Birth Year: \(self.birthYear!)", "Gender: \(self.gender!)"]//, "Homeworld: \(NetworkManager.shared.planetURLDictionary[self.homeworld!]?.name ?? "")", "Films: \(self.films!.joined(separator: ", "))", "Species: \(self.species!.joined(separator: ", "))", "Vehicles: \(self.vehicles!.joined(separator: ", "))", "Starships: \(self.starships!.joined(separator: ", "))"]
+        return ["Height: \(self.height!)", "Mass: \(self.mass!)", "Hair Color: \(self.hairColor!)", "Skin Color: \(self.skinColor!)", "Eye Color: \(self.eyeColor!)", "Birth Year: \(self.birthYear!)", "Gender: \(self.gender!)"]
     }
-//    
-//    func getLists() -> [String] {
-//        var lists = [String]()
-//        var tempString = "Films:"
-//        for film in self.films! {
-//            tempString.append(" \(NetworkManager.shared.filmURLDictionary[film]?.title ?? "")")
-//        }
-//        lists.append(tempString)
-//        tempString = "Species:"
-//        for species in self.species! {
-//            tempString.append(" \(NetworkManager.shared.speciesURLDictionary[species]?.name ?? "")")
-//        }
-//        lists.append(tempString)
-//        tempString = "Starships:"
-//        for starship in self.starships! {
-//            tempString.append(" \(NetworkManager.shared.starshipURLDictionary[starship]?.name ?? "")")
-//        }
-//        lists.append(tempString)
-//        tempString = "Vehicles:"
-//        for vehicle in self.vehicles! {
-//            tempString.append(" \(NetworkManager.shared.vehicleURLDictionary[vehicle]?.name ?? "")")
-//        }
-//        lists.append(tempString)
-//        return lists
-//    }
+    
+    func getMoreInfo() -> [String: [String]] {
+        return [Constants.CATEGORY_FILM: self.films ?? [], Constants.CATEGORY_PLANET: [self.homeworld ?? "N/A"], Constants.CATEGORY_STARSHIP: self.starships ?? [], Constants.CATEGORY_VEHICLE: self.vehicles ?? [], Constants.CATEGORY_SPECIES: self.species ?? []]
+    }
     
 }

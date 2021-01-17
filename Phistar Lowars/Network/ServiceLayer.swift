@@ -45,7 +45,7 @@ class ServiceLayer {
         dataTask.resume()
     }
     
-    func request<Collection: Codable>(urlString: String, completion: @escaping (Result<Collection, Error>) -> ()) {
+    class func request<Collection: Codable>(urlString: String, completion: @escaping (Result<Collection, Error>) -> ()) {
         guard let url = URL(string: urlString) else { return }
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
