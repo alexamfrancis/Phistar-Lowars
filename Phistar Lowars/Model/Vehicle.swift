@@ -2,7 +2,7 @@
 //  Vehicle.swift
 //  Phistar Lowars
 //
-//  Created by Philo's #1 Applicant on 1/16/21.
+//  Created by Alexandra Francis on 1/14/21.
 //
 
 import Foundation
@@ -43,18 +43,6 @@ class Vehicle: Codable {
         case created
         case edited
         case url
-    }
-    
-}
-
-extension Vehicle: Detailable {
-    
-    func getDetails() -> [String] {
-        return ["Name: \(self.name ?? "")", "Model: \(self.model ?? "")", "Manufacturer: \(self.manufacturer ?? "")", "Cost in Credits: \(self.costInCredits ?? "")", "Length: \(self.length ?? "")", "Max Atmosphering Speed: \(self.maxAtmospheringSpeed ?? "")", "Crew: \(self.crew ?? "")", "Passengers: \(self.passengers ?? "")", "Cargo Capacity: \(self.cargoCapacity ?? "")", "Consumables: \(self.consumables ?? "")", "Vehicle Class: \(self.vehicleClass ?? "")"]
-    }
-    
-    func getMoreInfo() -> [Constants.SWCategory: [String]] {
-        return [.people: self.pilots ?? [], .films: self.films ?? []]
     }
     
 }

@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "Yoda.jpg",
       "idiom" : "universal"
     }
   ],

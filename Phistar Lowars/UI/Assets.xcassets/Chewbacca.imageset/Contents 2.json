@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "Chewbacca.jpg",
       "idiom" : "universal"
     }
   ],

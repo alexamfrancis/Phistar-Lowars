@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "Bossk.jpg",
       "idiom" : "universal"
     }
   ],

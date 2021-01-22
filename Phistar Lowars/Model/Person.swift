@@ -2,7 +2,7 @@
 //  Person.swift
 //  Phistar Lowars
 //
-//  Created by Philo's #1 Applicant on 1/16/21.
+//  Created by Alexandra Francis on 1/14/21.
 //
 
 import Foundation
@@ -43,18 +43,6 @@ class Person: Codable {
         case created
         case edited
         case url
-    }
-    
-}
-
-extension Person: Detailable {
-    
-    func getDetails() -> [String] {
-        return ["Height: \(self.height ?? "")", "Mass: \(self.mass ?? "")", "Hair Color: \(self.hairColor ?? "")", "Skin Color: \(self.skinColor ?? "")", "Eye Color: \(self.eyeColor ?? "")", "Birth Year: \(self.birthYear ?? "")", "Gender: \(self.gender ?? "")"]
-    }
-    
-    func getMoreInfo() -> [Constants.SWCategory: [String]] {
-        return [.films: self.films ?? [], .planets: [self.homeworld ?? "N/A"], .starships: self.starships ?? [], .vehicles: self.vehicles ?? [], .species: self.species ?? []]
     }
     
 }

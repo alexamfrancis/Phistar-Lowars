@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "Dooku.jpg",
       "idiom" : "universal"
     }
   ],
