@@ -167,7 +167,17 @@ class SearchResultsTableViewController: UITableViewController {
 }
 
 extension SearchResultsTableViewController: UISearchResultsUpdating {
+    
     func updateSearchResults(for searchController: UISearchController) {
-        self.tableView.reloadData()
+        guard let text = searchController.searchBar.text else { return }
+        if text.isEmpty { self.tableView.reloadData() }
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async {
+            NetworkManager.shared.search(for: text) { success in
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
+    
 }

@@ -15,6 +15,7 @@ enum Router {
     case getSpecies
     case getStarships
     case getVehicles
+    case search(category: Constants.SWCategory, text: String)
     
     var scheme: String {
         return "https"
@@ -38,6 +39,17 @@ enum Router {
             return "/api/starships"
         case .getVehicles:
             return "/api/vehicles"
+        case .search(let category, _):
+            return "/api/\(category)"
+        }
+    }
+    
+    var queryItems: [URLQueryItem] {
+        switch self {
+        case .search(_, let text):
+            return [URLQueryItem(name: "search", value: text)]
+        default:
+            return []
         }
     }
 

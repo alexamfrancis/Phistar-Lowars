@@ -18,6 +18,7 @@ class ServiceLayer {
         components.scheme = router.scheme
         components.host = router.host
         components.path = router.path
+        components.queryItems = router.queryItems
 
         guard let url = components.url else { return }
         var urlRequest = URLRequest(url: url)

@@ -31,6 +31,7 @@
 		0A56264B25B2C4F1006D75D1 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56264925B2C4F1006D75D1 /* PersonDetailViewController.swift */; };
 		0A56264C25B2C4F1006D75D1 /* PersonDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A56264A25B2C4F1006D75D1 /* PersonDetailViewController.xib */; };
 		0A56265525B38A7F006D75D1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56265425B38A7E006D75D1 /* Constants.swift */; };
+		0AD11E8525C1F2DC00C00FB5 /* NetworkManager+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD11E8425C1F2DC00C00FB5 /* NetworkManager+Search.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		0A56264925B2C4F1006D75D1 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		0A56264A25B2C4F1006D75D1 /* PersonDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonDetailViewController.xib; sourceTree = "<group>"; };
 		0A56265425B38A7E006D75D1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0AD11E8425C1F2DC00C00FB5 /* NetworkManager+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+Search.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				0A56262D25B247BA006D75D1 /* NetworkManager.swift */,
+				0AD11E8425C1F2DC00C00FB5 /* NetworkManager+Search.swift */,
 				0A36184E25B1440800BFD9AC /* Router.swift */,
 				0A36185325B1455800BFD9AC /* ServiceLayer.swift */,
 			);
@@ -346,6 +349,7 @@
 				0A56262E25B247BA006D75D1 /* NetworkManager.swift in Sources */,
 				0A36187F25B20D4500BFD9AC /* Collection.swift in Sources */,
 				0A505AFC25B4A14F0072221C /* MoreInfoTableViewController.swift in Sources */,
+				0AD11E8525C1F2DC00C00FB5 /* NetworkManager+Search.swift in Sources */,
 				0A36184F25B1440800BFD9AC /* Router.swift in Sources */,
 				0A36186725B145DE00BFD9AC /* Planet.swift in Sources */,
 				0A56265525B38A7F006D75D1 /* Constants.swift in Sources */,
